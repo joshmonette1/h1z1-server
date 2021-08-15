@@ -407,11 +407,17 @@ const hax: any = {
     isSonic = !isSonic;
   },
   observer: function (server: ZoneServer, client: Client, args: any[]) {
+    server.sendDataToAll("PlayerUpdate.ReplaceBaseModel", {
+      characterId: client.character.characterId,
+      modelId: 9371, // Vehicle_Common_NullObserver.adr
+    });
+    server.sendChatText(client, "Delete player, back in observer mode");
+  },
+  observerOld: function (server: ZoneServer, client: Client, args: any[]) {
     server.sendDataToAll("PlayerUpdate.RemovePlayer", {
       characterId: client.character.characterId,
     });
     delete server._characters[client.character.characterId];
-    debug(server._characters);
     server.sendChatText(client, "Delete player, back in observer mode");
   },
   changeStat: function (server: ZoneServer, client: Client, args: any[]) {
