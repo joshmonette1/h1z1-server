@@ -5177,7 +5177,16 @@ const packets = [
   ["Ui.Message", 0x1a0e, {}],
   ["Ui.CinematicStartLookAt", 0x1a0f, {}],
   ["Ui.WeaponHitFeedback", 0x1a10, {}],
-  ["Ui.HeadShotFeedback", 0x1a11, {}],
+  [
+    "Ui.HeadShotFeedback",
+    0x1a11,
+    {
+      fields: [
+        { name: "unknownBoolean1", type: "boolean", defaultValue: false},
+        { name: "unknownBoolean2", type: "boolean", defaultValue: false},
+      ],
+    },
+  ],
   ["Ui.WaypointCooldown", 0x1a14, {}],
   ["Ui.ZoneWaypoint", 0x1a15, {}],
   ["Ui.WaypointNotify", 0x1a16, {}],
