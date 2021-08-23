@@ -592,8 +592,8 @@ const dev: any = {
       server.sendChatText(client, "Missing 2 headshot args");
       return;
   } server.sendData(client, "Ui.HeadShotFeedback", {
-      unknownBoolean1: Number(false),
-      unknownBoolean2: Number(true),
+      unknownBoolean1: false,
+      unknownBoolean2: true,
     });
     server.sendChatText(client, "headshotfeedback")
   },
