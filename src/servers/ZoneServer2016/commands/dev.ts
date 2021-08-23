@@ -588,10 +588,7 @@ const dev: any = {
     client: Client,
     args: any[]
   ) {    
-     {
-      server.sendChatText(client, "Missing 2 headshot args");
-      return;
-  } server.sendData(client, "Ui.HeadShotFeedback", {
+      server.sendData(client, "Ui.HeadShotFeedback", {
       unknownBoolean1: false,
       unknownBoolean2: true,
     });
