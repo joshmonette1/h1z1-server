@@ -583,6 +583,20 @@ const dev: any = {
       model: modelChoosen,
     });
   },
+  headshot: function (
+    server: ZoneServer2016,
+    client: Client,
+    args: any[]
+  ) {     
+    if (!args[2]) {
+      server.sendChatText(client, "Missing 2 headshot args");
+      return;
+  } server.sendData(client, "Ui.HeadShotFeedback", {
+      unknownBoolean1: Number(args[1]),
+      unknownBoolean2: Number(args[2]),
+    });
+    server.sendChatText(client, "headshotfeedback")
+  },
   /*
   proxiedObjects: function(server: ZoneServer2016, client: Client, args: any[]) {
     
