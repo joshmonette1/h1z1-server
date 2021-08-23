@@ -587,13 +587,13 @@ const dev: any = {
     server: ZoneServer2016,
     client: Client,
     args: any[]
-  ) {     
-    if (!args[2]) {
+  ) {    
+     {
       server.sendChatText(client, "Missing 2 headshot args");
       return;
   } server.sendData(client, "Ui.HeadShotFeedback", {
-      unknownBoolean1: Number(args[1]),
-      unknownBoolean2: Number(args[2]),
+      unknownBoolean1: false,
+      unknownBoolean2: true,
     });
     server.sendChatText(client, "headshotfeedback")
   },
