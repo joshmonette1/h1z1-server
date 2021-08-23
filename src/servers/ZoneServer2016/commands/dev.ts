@@ -589,7 +589,7 @@ const dev: any = {
     args: any[]
   ) {    
       server.sendData(client, "Ui.HeadShotFeedback", {
-      unknownBoolean1: false,
+      unknownBoolean1: true,
       unknownBoolean2: true,
     });
     server.sendChatText(client, "headshotfeedback")
